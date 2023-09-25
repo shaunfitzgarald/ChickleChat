@@ -4,6 +4,34 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// The next 21 lines are what Firebase wanted me to add in order to get this app connected with Firebase
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCXo-cnC4aUeTgSs5SzMxEZMYA5dt3ZgdI",
+  authDomain: "chicklechat.firebaseapp.com",
+  projectId: "chicklechat",
+  storageBucket: "chicklechat.appspot.com",
+  messagingSenderId: "999203902324",
+  appId: "1:999203902324:web:8c4b58f7cd4beb67be9221",
+  measurementId: "G-LGYKTQP23G"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+// Instructions for initializing Firebase on your machine, and deploying changes to Firebase when your ready, can be found here...
+// https://firebase.google.com/docs/hosting/quickstart?hl=en&authuser=0&_gl=1*xvedki*_ga*MTU3MjU3ODYxMS4xNjk1NjIwMjc0*_ga_CW55HF8NVT*MTY5NTYyNDIwMS4yLjEuMTY5NTYyNDQzNC4wLjAuMA..
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
