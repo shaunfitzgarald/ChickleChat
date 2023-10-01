@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ChatRoom from './components/ChatRoom';
 import LoginForm from './components/LoginForm';
-import { generateKeyPair, encryptMessage, decryptMessage } from './components/cryptoUtils'; // You'll need a crypto library for encryption/decryption
+import { generateKeyPair, encryptMessage, decryptMessage } from './components/CryptoUtils'; // You'll need a crypto library for encryption/decryption
 
 class App extends Component {
   constructor(props) {
