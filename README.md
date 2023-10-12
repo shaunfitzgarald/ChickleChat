@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# ChickleChat
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A real-time chat application using React and Google Firebase.
 
 ## Available Scripts
 
