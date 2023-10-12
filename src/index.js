@@ -15,13 +15,13 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCXo-cnC4aUeTgSs5SzMxEZMYA5dt3ZgdI",
+  apiKey: "",
   authDomain: "chicklechat.firebaseapp.com",
   projectId: "chicklechat",
   storageBucket: "chicklechat.appspot.com",
-  messagingSenderId: "999203902324",
-  appId: "1:999203902324:web:8c4b58f7cd4beb67be9221",
-  measurementId: "G-LGYKTQP23G"
+  messagingSenderId: "",
+  appId: "",
+  measurementId: ""
 };
 
 // Initialize Firebase
