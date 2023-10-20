@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -14,14 +15,15 @@ import { getAnalytics } from "firebase/analytics";
 
 // Load environment variables from .env file
 require('dotenv').config();
+console.log(process.env.API_KEY);
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: process.env.API_KEY,
-  authDomain: "chicklechat.firebaseapp.com",
-  projectId: "chicklechat",
-  storageBucket: "chicklechat.appspot.com",
+  authDomain: process.env.AUTH_DOMAIN,
+  projectId: process.env.PROJECT_ID,
+  storageBucket: process.env.STORAGE_BUCKET,
   messagingSenderId: process.env.MESSAGING_SENDER_ID,
   appId: process.env.APP_ID,
   measurementId: process.env.MEASUREMENT_ID

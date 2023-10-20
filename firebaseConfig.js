@@ -27,23 +27,22 @@ const firebaseConfig = {
     measurementId: process.env.MEASUREMENT_ID
   };
 
-// Initialize Firebase
+  // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// Initialize Firebase Analytics
-const analytics = getAnalytics(app);
+// Initialize App Check
+const appCheck = initializeAppCheck(app, {
+  provider: new ReCaptchaV3Provider('process.env.REACT_APP_RECAPTCHA_SITE_KEY'),
 
-// Initialize Firebase Authentication and get a reference to the service
-const auth = getAuth(app);
+  // Optional argument. If true, the SDK automatically refreshes App Check
+  // tokens as needed.
+  isTokenAutoRefreshEnabled: true
+});
 
-// Initialize Realtime Database and get a reference to the service
-const database = getDatabase(app);
-
-// Initialize Firebase Cloud Messaging and get a reference to the service
-const messaging = getMessaging(app);
-
-// Initialize Cloud Storage and get a reference to the service
-const storage = getStorage(app);
-
-// Initialize Performance Monitoring and get a reference to the service
-const perf = getPerformance(app);
+// Get Firebase services
+const analytics = getAnalytics(app); // Initialize Firebase Analytics
+const auth = getAuth(app); // Initialize Firebase Authentication and get a reference to the service
+const database = getDatabase(app); // Initialize Realtime Database and get a reference to the service
+const messaging = getMessaging(app); // Initialize Firebase Cloud Messaging and get a reference to the service
+const storage = getStorage(app); // Initialize Cloud Storage and get a reference to the service
+const performance = getPerformance(app); // Initialize Performance Monitoring and get a reference to the service

@@ -6,6 +6,15 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'), // Replace with the path to your app's build directory
   },
+  resolve: {
+    fallback: {
+      "path": require.resolve("path-browserify"),
+      "os": require.resolve("os-browserify/browser")
+    }
+  },
+  node: {
+    fs: 'empty'
+  },
   module: {
     rules: [
       {
