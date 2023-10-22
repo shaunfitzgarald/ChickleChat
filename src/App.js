@@ -1,7 +1,17 @@
 import React, { Component } from 'react';
 import ChatRoom from './components/ChatRoom';
 import LoginForm from './components/LoginForm';
+import { analytics } from './index.js';
 import { generateKeyPair, encryptMessage, decryptMessage } from './components/CryptoUtils'; // You'll need a crypto library for encryption/decryption
+
+// Log an event
+analytics.logEvent('some_event');
+
+// Set user properties
+analytics.setUserProperties({
+  some_property: 'some_value',
+});
+
 
 class App extends Component {
   constructor(props) {
