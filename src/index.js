@@ -10,7 +10,6 @@ import reportWebVitals from './reportWebVitals';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
-export const analytics = getAnalytics(app);
 
 
 // TODO: Add SDKs for Firebase products that you want to use
